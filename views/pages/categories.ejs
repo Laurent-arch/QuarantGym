@@ -14,6 +14,10 @@
 
         @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
+        body {
+            background-color: rgb(247, 246, 255);
+        }
+
         .navbar-custom {
             background-color: black;
             height: 8rem;
@@ -56,7 +60,7 @@
         }
 
         a:hover {
-            color: rgb(216, 172, 30);
+            color: rgb(253, 168, 10);
         }
 
         a {
@@ -64,20 +68,21 @@
         }
 
         .h1-main {
-            background-color: #6098ff;
+            background-color: #9a8ef3;
         }
 
         .display-text-a {
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         .display-text-b {
             display: flex;
             justify-content: left;
+            border-radius: 10px;
         }
 
 
-        button {
+        /* button {
             background: none;
             color: #6098ff;
             border: 2px solid;
@@ -92,6 +97,66 @@
             box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
             transform: translateY(-0.25em);
             cursor: pointer;
+        } */
+        .btn-see {
+            text-decoration: none;
+            border: 1px solid #7160F8;
+            position: relative;
+            background-color: rgb(15, 15, 15);
+            overflow: hidden;
+            font-size: 1.1rem;
+            padding: 0.8rem 2.2rem;
+            color: rgb(225, 202, 247);
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-family: 'Russo One', sans-serif;
+            letter-spacing: 0.15rem;
+        }
+
+        .btn-see:hover {
+            box-shadow: 1px 1px 10px 3px #7160F8;
+        }
+
+        .btn-see:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg,
+                    transparent,
+                    /* rgb(103, 77, 197), */
+                    silver,
+                    transparent);
+            transition: all 650ms;
+        }
+
+        .btn-see:hover:before {
+            left: 100%;
+        }
+
+        .content-divider {
+            height: 0.5rem;
+            background: linear-gradient(to left,
+                    #7160F8,
+                    rgb(230, 234, 247),
+                    #7160F8);
+        }
+
+        .custom-footer {
+            font-family: 'Russo One', sans-serif;
+            background-color: black;
+        }
+
+        /* contact */
+
+        .custom-contact {
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        #contact {
+            background-color: black;
         }
     </style>
 </head>
@@ -109,7 +174,7 @@
                     </button>
 
 
-                    <div class="navbar-collapse collapse show" style="background-color: black;" id="mobileNav">
+                    <div class="navbar-collapse collapse " style="background-color: black;" id="mobileNav">
                         <ul class="navbar-nav ml-3">
                             <li class="nav-item">
                                 <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
@@ -167,6 +232,7 @@
                 <h1><a href="" style="text-decoration: none;">Workouts</a></h1>
             </div>
         </div>
+        <hr>
 
         <!-- end of menu bar -->
 
@@ -182,12 +248,12 @@
                     sustainable and lasting change that will help you feel and look your most confident. Whether Pilates
                     is second nature to you, or if you’re a beginner, a mom, business woman or both… The Pilates Class
                     is for you.</p>
-                <div class="d-flex justify-content-center">
-                    <button class="mt-5">Learn More</button>
-                </div>
+
             </div>
         </div>
         <hr class="d-lg-none">
+        <div class="content-divider"></div>
+
         <div class="row mx-1">
 
             <div class="col-lg-6 col-md-12 cst-div">
@@ -197,9 +263,7 @@
                     better, feel better, and live better. ALL LEVELS, ALL GOALS means it's literally for ALL OF YOU:
                     Beginners, Pro Athletes, Runners, Yogis, Cyclists, Cross-Trainers, Service members, Combat Athletes,
                     and more.</p>
-                <div class="d-flex justify-content-center">
-                    <button class="my-5">Learn More</button>
-                </div>
+
 
             </div>
             <div class="col-lg-6 col-md-12">
@@ -208,7 +272,7 @@
 
         </div>
         <hr class="d-lg-none">
-
+        <div class="content-divider"></div>
 
         <div class="row mx-1">
             <div class="col-lg-6 col-md-12">
@@ -222,12 +286,11 @@
                     fat and calories.Part of what sets cardio apart from other types of exercise—such as strength
                     training, for instance—is that it relies on your body's ability to use oxygen during the workout
                     session. A person's cardio ability or capacity can vary based on a number of factors.</p>
-                <div class="d-flex justify-content-center">
-                    <button class="mt-5">Learn More</button>
-                </div>
+
             </div>
         </div>
         <hr class="d-lg-none">
+        <div class="content-divider"></div>
 
         <div class="row mx-1">
             <div class="col-lg-6 col-md-12">
@@ -239,16 +302,97 @@
                     pushing etc. Many workouts feature variations of squats, push-ups, and weight lifting that last for
                     predetermined amounts of time to help build muscles. This varies from a traditional workout that may
                     tell you how many reps to do over any period of time.</p>
-                <div class="d-flex justify-content-center">
-                    <button class="mt-5">Learn More</button>
-                </div> <br>
+
             </div>
             <div class="col-lg-6 col-md-12">
                 <img src="/images/crossfit.jpeg" width="100%">
             </div>
         </div>
     </section>
+    <div class="content-divider"></div>
+    <!-- footer -->
+    <section class="pb-1" id="contact">
+        <div class="container">
 
+            <div class="row">
+
+                <div class="col-md-4 px-3 text-center my-5 pt-3">
+                    <img src="/images/main-logo.jpg" class="img-fluid mb-3" alt="company image" width="150px" />
+
+                    <div class="col text-center">
+                        <h2 class="display-5 text-uppercase text-white my-4 h2title">
+                            <strong>follow us on</strong>
+                        </h2>
+                        <div class="row">
+                            <div class="col text-center">
+                                <a href="https://www.facebook.com/" class="btn">
+                                    <img src="/images/facebook.png" alt="" width="30rem">
+                                </a>
+                                <a href="https://www.instagram.com/" class="btn">
+                                    <img src="/images/instagram.png" alt="" width="30rem">
+                                </a>
+                                <a href="https://twitter.com/" class="btn">
+                                    <img src="/images/twitter.png" alt="" width="30rem">
+                                </a>
+                                <a href="https://www.youtube.com/" class="btn">
+                                    <img src="/images/youtube.png" alt="" width="30rem">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="title-underline mt-4 bg-secondary"></div>
+
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-5 mx-auto px-3 text-center my-5">
+                    <!-- section title -->
+                    <div class="row">
+                        <div class="col text-center mb-1">
+                            <h1 class="text-uppercase text-white custom-contact">contact us</h1>
+                            <div class="title-underline my-3 bg-secondary">
+                                <div class="title-underline__center"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of section title -->
+
+                    <div class="single-contact px-5 my-3 d-flex justify-content-between">
+                        <span class="mr-3"> <i class=" text-white fas fa-map"></i> </span>
+                        <p class="text-white text-capitalize">
+                            123 main street Athens, ATT 90020
+                        </p>
+                    </div>
+
+
+                    <div class="single-contact px-5 my-3 d-flex justify-content-between">
+                        <span class=" mr-3"> <i class=" text-white fas fa-phone"></i> </span>
+                        <p class="text-white text-capitalize">
+                            + 123 456 789
+                        </p>
+                    </div>
+
+                    <div class="single-contact px-5 my-3 d-flex justify-content-between">
+                        <span class="mr-3"> <i class=" text-white fas fa-envelope"></i> </span>
+                        <p class="text-white text-capitalize">
+                            email@email.com
+                        </p>
+                    </div>
+
+                    <div class="single-contact px-5 my-3 d-flex justify-content-between">
+                        <span class="mr-3"> <i class="text-white fas fa-clock"></i> </span>
+                        <p class="text-white text-capitalize">
+                            mon - sat 8:00 AM - 7:00 PM
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <p class="mt-2 text-capitalize text-muted text-center">Copyright 2021@ Quarantgym is registered
+            trademark of
+            Quarantgym
+            International Ltd. All rights reserved.</p>
+    </section>
+    <!-- end of footer -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

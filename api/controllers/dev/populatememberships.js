@@ -28,13 +28,13 @@ module.exports = {
                 if(membershipList[membership].isOffer == true){
                     // Here we populate the price field on GET based on the name of the membership.
                     if(membershipList[membership].name == 'Bronze') {
-                        membershipList[membership].price = 200
+                        membershipList[membership].price = 80
                     } else if (membershipList[membership].name == 'Silver') {
-                        membershipList[membership].price = 300
+                        membershipList[membership].price = 150
                     }  else if (membershipList[membership].name == 'Special Offer') {
-                        membershipList[membership].price = 280
+                        membershipList[membership].price = 120
                     }  else {
-                        membershipList[membership].price = 600
+                        membershipList[membership].price = 300
                     }
                     
                     
@@ -63,13 +63,13 @@ module.exports = {
                 if(membershipList[membership].isOffer == false) {
                     
                     if(membershipList[membership].name == 'Bronze') {
-                        membershipList[membership].price = 200
+                        membershipList[membership].price = 80
                     } else if (membershipList[membership].name == 'Silver') {
-                        membershipList[membership].price = 300
+                        membershipList[membership].price = 150
                     }  else if (membershipList[membership].name == 'Special Offer') {
-                        membershipList[membership].price = 280
+                        membershipList[membership].price = 120
                     }  else {
-                        membershipList[membership].price = 600
+                        membershipList[membership].price = 300
                     }
                     
                     //console.log(membershipList[membership].isOffer)

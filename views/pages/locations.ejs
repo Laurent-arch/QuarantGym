@@ -90,15 +90,15 @@
         }
 
         a:hover {
-            color: rgb(216, 172, 30);
+            color: rgb(253, 168, 10);
         }
 
         .h1-main {
-            background-color: #6098ff;
+            background-color: #9a8ef3;
         }
 
         .display-text-a {
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         .display-text-b {
@@ -121,7 +121,7 @@
             background-color: black;
         }
 
-        .btnseemore {
+        /* .btnseemore {
             background-color: #fff;
             color: rgba(166, 155, 251, 1);
             font-size: 24px;
@@ -134,6 +134,43 @@
         .btnseemore:hover {
             color: white;
             background-color: rgba(166, 155, 251, 1);
+        } */
+        .btn-see {
+            text-decoration: none;
+            border: 1px solid #7160F8;
+            position: relative;
+            background-color: rgb(15, 15, 15);
+            overflow: hidden;
+            font-size: 1.1rem;
+            padding: 0.8rem 2.2rem;
+            color: rgb(225, 202, 247);
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-family: 'Russo One', sans-serif;
+            letter-spacing: 0.15rem;
+        }
+
+        .btn-see:hover {
+            box-shadow: 1px 1px 10px 3px #7160F8;
+        }
+
+        .btn-see:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg,
+                    transparent,
+                    /* rgb(103, 77, 197), */
+                    silver,
+                    transparent);
+            transition: all 650ms;
+        }
+
+        .btn-see:hover:before {
+            left: 100%;
         }
 
         a {
@@ -170,7 +207,7 @@
                     </button>
 
 
-                    <div class="navbar-collapse collapse show" style="background-color: black;" id="mobileNav">
+                    <div class="navbar-collapse collapse" style="background-color: black;" id="mobileNav">
                         <ul class="navbar-nav ml-3">
                             <li class="nav-item">
                                 <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
@@ -232,7 +269,7 @@
         <hr>
 
         <div class="row mt-2 mx-1 custom-div">
-            <div class="col-lg-6 col-md-12 mb-2">
+            <div class="col-lg-6 col-md-12">
                 <!-- <img src="/images/pilates2.png" width="100%"> -->
                 <img src="images/ethnikosKiposPhotos.jpg" width="100%">
             </div>
@@ -243,11 +280,10 @@
                     Square and the Kallimarmaro (Panathenaic) Stadium, stands the famous National Garden of Athens, a
                     beautiful area to escape the noisy city center and relax in a lush green environment. It is almost
                     unbelievable that such an amazing garden is situated among the busiest avenues of the city and still
-                    it is so well-protected from noise.The National Garden covers a vast area of about 16 hectares and
-                    they have three entrances: from Amalias Avenue, Vassilissis Sofias Avenue and from the Zappeion
-                    Megaron. It is situated on the north of Syntagma square, right next to the Greek Parliament.</p>
+                    it is so well-protected from noise.</p>
                 <div class="d-flex justify-content-center">
-                    <button class="btnseemore">See on map</button>
+                    <a href="https://www.google.com/maps/place/Εθνικός+Κήπος/@37.9726234,23.7384064,18z/data=!4m5!3m4!1s0x14a1bd3fbd35240d:0x8c3c56b60e730b9c!8m2!3d37.9728859!4d23.7373942"
+                        target="_blank"><button class="btn-see">See on map</button></a>
                 </div>
             </div>
         </div>
@@ -258,14 +294,13 @@
 
             <div class="col-lg-6 col-md-12">
                 <h3 class="d-flex justify-content-center pt-5 mb-5">Peristeri</h3>
-                <p class="text-muted p-modify">Whether beginning a fitness journey or pushing toward your summit, TRX
-                    Training
-                    helps you move
-                    better, feel better, and live better. ALL LEVELS, ALL GOALS means it's literally for ALL OF YOU:
-                    Beginners, Pro Athletes, Runners, Yogis, Cyclists, Cross-Trainers, Service members, Combat Athletes,
-                    and more.</p>
+                <p class="text-muted p-modify">The park was opened by the head of the region of Attica, Yiannis Sgouros,
+                    the vice-head of the regional division of Western Athens, Konstantinos Papandoniou and Peristeri’s
+                    mayor Andreas Pachatouridis. One of the region’s most important environmental projects, the park has
+                    improved the lives of thousands of people in the area – as well as the environment itself.</p>
                 <div class="d-flex justify-content-center">
-                    <button class="btnseemore">See on map</button>
+                    <a href="https://www.google.com/maps/place/Άλσος+Περιστερίου/@38.0168597,23.686347,17z/data=!4m5!3m4!1s0x14a1a346a68e1649:0xfb0fbcced228dd!8m2!3d38.0168599!4d23.6863471"
+                        target="_blank"><button class="btn-see">See on map</button></a>
                 </div>
 
             </div>
@@ -284,15 +319,14 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <h3 class="mb-5 d-flex justify-content-center pt-5">Marousi</h3>
-                <p class="text-muted  p-modify">Cardio exercise, which is sometimes referred to as aerobic exercise, is
-                    any
-                    rhythmic activity that
-                    raises your heart rate into your target heart rate zone. This is the zone where you burn the most
-                    fat and calories.Part of what sets cardio apart from other types of exercise—such as strength
-                    training, for instance—is that it relies on your body's ability to use oxygen during the workout
-                    session. A person's cardio ability or capacity can vary based on a number of factors.</p>
+                <p class="text-muted  p-modify">Syngros Forest was bequeathed to the Athens Agricultural Society by the
+                    wife of Andreas Syngros, who stipulated that the land be used to train farmers and gardeners.
+                    Syngros Mansion and Agios Andreas neo-Gothic chapel are also here. Although more than 400 hectares
+                    of woodland were destroyed by fire in 1981, the area is completely reforested and the estate now
+                    boasts more than 700 hectares of Aleppo pines and 200 hectares reserved for agriculture.</p>
                 <div class="d-flex justify-content-center">
-                    <button class="btnseemore">See on map</button>
+                    <a href=https://www.google.com/maps/place/%CE%9A%CF%84%CE%AE%CE%BC%CE%B1+%CE%A3%CF%85%CE%B3%CE%B3%CF%81%CE%BF%CF%8D/@38.0604959,23.820181,16.71z/data=!4m5!3m4!1s0x14a19ed132e0a15d:0x5251e730dbc28c8d!8m2!3d38.0626449!4d23.8184988"
+                        target="_blank"> <button class="btn-see">See on map</button></a>
                 </div>
             </div>
         </div>
@@ -302,15 +336,15 @@
         <div class="row mx-1">
             <div class="col-lg-6 col-md-12">
                 <h3 class="d-flex justify-content-center pt-5 mb-5">Glyfada</h3>
-                <p class="text-muted  p-modify">A form of high intensity interval training, CrossFit is a strength and
-                    conditioning workout that is
-                    made up of functional movement performed at a high intensity level.These movements are actions that
-                    you perform in your day-to-day life, like squatting, pulling,
-                    pushing etc. Many workouts feature variations of squats, push-ups, and weight lifting that last for
-                    predetermined amounts of time to help build muscles. This varies from a traditional workout that may
-                    tell you how many reps to do over any period of time.</p>
+                <p class="text-muted  p-modify">Glyfada beach is found in front of the famous coastal settlement where
+                    many Athenians visit during the summer season. It is located 16 km south of the city of Athens. In
+                    Glyfada, you will not find the typical pristine beaches, but you wil surely enjoy a refreshing swim
+                    at the crystalline waters and a relaxing sunbath. There are many ways to reach Glyfada beach, from
+                    any location in Athens.</p>
                 <div class="d-flex justify-content-center">
-                    <button class="btnseemore">See on map</button>
+                    <a href="https://www.google.com/maps/place/Παραλία+Αστέρια/@37.8656008,23.739552,16.5z/data=!4m5!3m4!1s0x14a1bfca01ed4b05:0x79adb4e56bff790b!8m2!3d37.8661024!4d23.7398028"
+                        target="_blank"><button class="btn-see">See on map</button></a>
+
                 </div> <br>
             </div>
             <div class="col-lg-6 col-md-12 photoconfig">

@@ -261,7 +261,6 @@ async function calculateSessions(req,res){
         totalTrainings = 0
     }
     
-    
     let message = 'beep';
     let trainingsLeft;
     console.log('inside utilities and calculating total trainigns:',totalTrainings)

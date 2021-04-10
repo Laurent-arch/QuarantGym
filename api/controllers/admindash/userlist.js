@@ -11,7 +11,7 @@ module.exports = {
     fn: async function() {
         let now = new Date();
         var today = utils.formatDate(now);
-        // console.log(today);
+
 
         var query1 = `
         SELECT id, startDate
@@ -20,7 +20,7 @@ module.exports = {
         `
 
         var payload1 = await sails.sendNativeQuery(query1, [today]);
-        // console.log(payload1)
+      
 
         //Here we find all memberships
         var query2 = `
@@ -28,7 +28,7 @@ module.exports = {
         FROM membership
         `
         var payload2 = await sails.sendNativeQuery(query2, [today]);
-        // console.log(payload1)
+        
 
         // Here we select the current user who is loggedIn and has a membership
 
@@ -43,7 +43,6 @@ module.exports = {
         `;
 
         var payload3 = await sails.sendNativeQuery(query3, [userId]);
-        // console.log(payload3.rows);
 
         // Here we select all active locations
 

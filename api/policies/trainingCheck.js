@@ -1,20 +1,7 @@
-/* updating with fixes :
-    
-    @dimitris : the function you included here does not do what you intended for it to do.
-    You can do calculations using the actual Date() object.
-    see below for method used : 
-        . create a new date object using the date parsed as req.body.startDate
-        . create a new date object for now using the new Date() method.
-        . directly compare the 2 date objects inside your if() statement.
-    
-        commenting out the function for reference and will remove on next push
 
-    policy now works as expected.
+const utils = require('../../application/utilities')
 
-
-*/
-
-let utils = require('../../application/utilities')
+const tools = require('../../application/tools');
 
 module.exports = async function(req, res, proceed) {
     console.log('inside policy trainingCheck')
@@ -30,9 +17,7 @@ module.exports = async function(req, res, proceed) {
     let errorLog = {};
 
     const isToday = new Date()
-    
-
-
+    const trainingUpdate = tools.trainingsHandle
 
 
     let whatUser = async()=>{
@@ -52,10 +37,7 @@ module.exports = async function(req, res, proceed) {
         }
     allTrainings = await whatUser()
     let sessionsLeft = await utils.calculateSessions(req,res)
-    //console.log(allTrainings)
-    
-    //console.log(startDate, location, trainerId, customerId,endDate)
-    //console.log('logging all trainings', allTrainings)
+
     for (let _training in allTrainings){
         //console.log(req.body.startDate,',', allTrainings[_training])
         if(req.body.startDate == allTrainings[_training].startDate){
@@ -67,7 +49,7 @@ module.exports = async function(req, res, proceed) {
     let locations = await Location.find({})
 
     let _locations = [];
-    // console.log(locations);
+
     for (let location in locations){
         let row = await locations[location]
        
@@ -87,13 +69,17 @@ module.exports = async function(req, res, proceed) {
     if(startDate < isToday) {
         errorLog.error = "You need to choose a valid date" 
     }
-    if (req.session.user)
+    // if (req.session.user)
     
     if(Object.keys(errorLog).length>0) {
         return res.view('pages/account/trainerpage', {errorList:errorLog, bookedTrainings: "", trainingLocations: _locations, trainerObject : {trainerFirstName, trainerLastName, trainerBio, trainerImage}})
         }
-
-    return proceed();
+    
+    else if(Object.keys(errorLog).length<1){
+        await trainingUpdate('book',req,res)
+        return proceed();
+    }
+    
 
 }
 

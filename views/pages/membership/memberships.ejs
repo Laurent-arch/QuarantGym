@@ -15,8 +15,6 @@
         font-family: 'Russo One', sans-serif;
     }
 
-    .tit {}
-
     .custom-div {
         z-index: 0;
     }
@@ -82,34 +80,45 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#contact">Contact</a>
                         </li>
-                        <% if(req.session.user) { %>
+                        <% if(req.session.user && req.session.user.isAdmin==true) { %>
                             <li class="nav-item d-lg-none">
-                                <a href="/detailsuser" class="nav-link text-white account">
+                                <a href="/users/list" class="nav-link text-white account">
                                     <%=req.session.user.fname%>
                                 </a>
                             </li>
-                            <% } else { %>
+                            <% } else if (req.session.user) {%>
                                 <li class="nav-item d-lg-none">
-                                    <a href="/login" class="nav-link text-white">Sign in</a>
+                                    <a href="/detailsuser" class="nav-link text-white account">
+                                        <%=req.session.user.fname%>
+                                    </a>
                                 </li>
-                                <li class="nav-item d-lg-none">
-                                    <a href="/signup" class="nav-link text-white">Sign up</a>
-                                </li>
-                                <% } %>
+                                <% } else { %>
+                                    <li class="nav-item d-lg-none">
+                                        <a href="/login" class="nav-link text-white">Sign in</a>
+                                    </li>
+                                    <li class="nav-item d-lg-none">
+                                        <a href="/signup" class="nav-link text-white">Sign up</a>
+                                    </li>
+                                    <% } %>
                     </ul>
                 </div>
-                <% if(req.session.user) { %>
-                    <div class="m-3 text-right d-none d-lg-block"><a class="account" href="/detailsuser">
+                <% if(req.session.user && req.session.user.isAdmin==true) { %>
+                    <div class="m-3 text-right d-none d-lg-block"><a class="account" href="/users/list">
                             <%=req.session.user.fname%><img src="/images/user.png" alt="user" width="30rem">
                         </a></div>
-                    <% } else { %>
-                        <div class="m-3 text-right text-white d-none d-lg-block">
-                            <a href="/login" class="nav-link text-white">Sign in</a>
-                        </div>
-                        <div class="m-3 text-right text-white d-none d-lg-block">
-                            <a href="/signup" class="nav-link text-white">Sign up</a>
-                        </div>
-                        <% } %>
+                    <% } else if (req.session.user) {%>
+                        <div class="m-3 text-right d-none d-lg-block"><a class="account" href="/detailsuser">
+                                <%=req.session.user.fname%><img src="/images/user.png" alt="user" width="30rem">
+                            </a></div>
+
+                        <% } else { %>
+                            <div class="m-3 text-right text-white d-none d-lg-block">
+                                <a href="/login" class="nav-link text-white">Sign in</a>
+                            </div>
+                            <div class="m-3 text-right text-white d-none d-lg-block">
+                                <a href="/signup" class="nav-link text-white">Sign up</a>
+                            </div>
+                            <% } %>
             </div>
         </nav>
 
@@ -196,3 +205,4 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+

@@ -3,11 +3,46 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <link rel="stylesheet" href="homecss.css">
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
 
 <style>
+    @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
-    @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+    body {
+        z-index: 0;
+        position: relative;
+    }
+
+    /* chat */
+    .chat-icon {
+        height: 100vh;
+        z-index: 2;
+        position: fixed;
+        right: 10%;
+        top: 88%;
+    }
+
+    .circle {
+        position: relative;
+        background-color: #77b2d5;
+        border-radius: 50%;
+        animation: pulse-red 2s infinite;
+        z-index: 3;
+        height: 60px;
+        width: 60px;
+    }
+
+    /* navbar */
+    .image {
+        z-index: 5;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 58px;
+    }
 
     .navbar-custom {
         background-color: black;
@@ -15,46 +50,71 @@
         font-family: 'Russo One', sans-serif;
     }
 
+    #mobileNav {
+        z-index: 3;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
 
     .account {
         text-decoration: none;
         margin-top: 20px;
         color: white;
-
     }
 
     div ul li a {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
+    /* main picture */
     .max-height {
         min-height: calc(100vh - 128px);
-        background: url('/images/MicrosoftTeams-image\ \(1\).png')center/cover no-repeat fixed;
-        margin-bottom: 0.2rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+            url(/images/newhome.jpg)center/cover no-repeat fixed;
+        background-position: top;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .wrapper {
-        position: relative;
+        z-index: 0;
     }
 
     .custom-text {
-        position: absolute;
-        top: 30%;
-        left: 8%;
         width: 40%;
+        margin-top: -15%;
+        margin-left: 2%;
         color: honeydew;
+        text-align: center;
         font-size: 36px;
         font-family: 'Permanent Marker', cursive;
     }
 
-    .about-picture {
-        background: url(/images/iStock-1223133311.jpg)center/cover no-repeat;
+    /* about section */
+    .custom-h5 {
+        font-size: 0.2rem;
+        font-family: 'Roboto', sans-serif;
+        text-align: justify;
+        line-height: 50px;
 
     }
 
-    .height-60 {
+    .title-underline {
+        width: 100px;
+        border: 2px solid #7160F8;
+        margin: 0 auto;
+        background-color: #7160F8;
+    }
+
+    .custom-h1 {
+        font-family: 'Permanent Marker', cursive;
+    }
+
+    .about-picture {
+        background:
+            url(/images/iStock-1223133311.jpg)center/cover no-repeat;
         min-height: 60vh;
-        /* margin-right: 0.2rem; */
     }
 
     .aboutus {
@@ -63,30 +123,9 @@
 
     .custom-about {
         background-color: black;
-        margin: auto;
-    }
-
-    .rounded {
-        border-radius: 50px;
-
-    }
-
-    /* about section */
-    .custom-h5 {
-        /* margin: 80px 120px 80px 120px; */
-        padding: 0 50px;
-        font-size: 0.5rem;
-        font-family: 'Permanent Marker', cursive;
-        text-align: justify;
-        /* display: flex;
-        align-items: center;
-        justify-content: center; */
-        /* height: 50vh; */
-        line-height: 50px;
-    }
-
-    .custom-h1 {
-        font-family: 'Permanent Marker', cursive;
+        margin: 5% 10%;
+        display: flex;
+        flex-direction: column;
     }
 
     /* trainings */
@@ -97,7 +136,6 @@
 
     .training-picture {
         background: url(/images/iStock-1223133121.jpg)center/cover no-repeat;
-        margin-top: 0.2rem;
         height: 60vh;
     }
 
@@ -105,44 +143,105 @@
         font-family: 'Permanent Marker', cursive;
     }
 
-    /*pricing-cards*/
-
-    .title-underline {
-        width: 100px;
-        border: 2px solid #7160F8;
-        margin: 0 auto;
-
-    }
-
-    #pricing-cards {
-        /* background: #7160F8; */
-    }
-
-    #pricing-cards .dollar-sign {
-        font-size: 2.5em;
-    }
-
-    .single-item:hover {
-        box-shadow: 0 10px 15px rgba(0, 0, 0);
-    }
-
-    .single-item {
-        background: burlywood;
-    }
-
-    .custom-footer {
-        font-family: 'Russo One', sans-serif;
-        background-color: black;
+    .img-tr {
+        border-radius: 5%;
     }
 
     .link {
         color: white;
     }
 
-    .tit {
-        background-color: pink;
+    /* banner */
+
+    .container-promo {
+        background-image: url(/images/promo-pic.jpg);
+        background-size: cover;
+        background-position: top;
+
+        display: flex;
+        justify-content: flex-start;
+        width: 60%;
+        height: 100%;
+        margin: 0 auto;
     }
 
+    .text-promo {
+        font-size: 24px;
+        color: white;
+        text-align: center;
+        margin: 50px 80px;
+        z-index: 1;
+        padding-bottom: 70px;
+    }
+
+    @media (max-width: 800px) {
+
+        .container-promo {
+            width: 100%;
+            background-size: left;
+        }
+
+        .text-promo {
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            margin: 70px 40px;
+            z-index: 1;
+        }
+    }
+
+    .title-promo {
+        font-family: 'Russo One', sans-serif;
+        font-size: 80px;
+        color: rgb(241, 229, 112);
+    }
+
+    .text-2 {
+        color: white;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .btn-get-it {
+        vertical-align: middle;
+        display: inline-block;
+        border-radius: 4px;
+        background-color: transparent;
+        border: solid 1px white;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 15px;
+        width: 200px;
+        transition: all 0.2s;
+        cursor: pointer;
+        margin: 5px;
+        font-family: 'Russo One', sans-serif;
+    }
+
+    .btn-get-it:hover {
+        border-color: #fbfafc;
+        color: white;
+        box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+        transform: translateY(-0.25em);
+        cursor: pointer;
+        background-color: #7160F8;
+    }
+
+    /* footer */
+
+    .h2title {
+        font-family: 'Russo One', sans-serif;
+    }
+
+    .custom-contact {
+        font-family: 'Permanent Marker', cursive;
+    }
+
+    #contact {
+        background-color: black;
+    }
+
+    /* buttons */
     .btnseemore {
         background-color: #fff;
         color: rgba(166, 155, 251, 1);
@@ -156,22 +255,95 @@
     .btnseemore:hover {
         color: white;
         background-color: rgba(166, 155, 251, 1);
+
+    }
+
+    .btnseemore:active {
+        border: none;
+    }
+
+    .btn-see {
+        text-decoration: none;
+        border: 1px solid #7160F8;
+        position: relative;
+        background-color: #000;
+        overflow: hidden;
+        font-size: 1.1rem;
+        padding: 0.6rem 2rem;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 10px;
+        font-family: 'Russo One', sans-serif;
+        letter-spacing: 0.15rem;
+    }
+
+    .btn-see:hover {
+        box-shadow: 1px 1px 10px 3px #7160F8;
+    }
+
+    .btn-see:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg,
+                transparent,
+                /* rgb(103, 77, 197), */
+                silver,
+                transparent);
+        transition: all 650ms;
+    }
+
+    .btn-see:hover:before {
+        left: 100%;
+    }
+
+    .btn-see:active {
+        border: none;
+    }
+
+    @keyframes pulse-red {
+        0% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 rgba(166, 155, 251, 1);
+        }
+
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+        }
+
+        100% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+        }
     }
 </style>
 
 <body>
     <!-- header -->
     <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-custom ">
+        <nav class="navbar navbar-expand-lg navbar-custom">
             <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNav"
+                    aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon burger-custom"><img src="/images/burger2.png" alt=""
+                            style="height: 100%; width: 100%; object-fit: contain;"></span>
+                </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-3">
+
+                <div class="navbar-collapse collapse" style="background-color: black;" id="mobileNav">
+                    <ul class="navbar-nav ml-2 mt-2">
+                        <li class="nav-item mr-2">
+                            <img src="/images/main-logo.jpg" alt="" width="50px">
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">About</a>
+                            <a class="nav-link text-white" href="/aboutus">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/trainers">Trainers</a>
@@ -182,59 +354,71 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#contact">Contact</a>
                         </li>
+                        <% if(req.session.user && req.session.user.isAdmin==true) { %>
+                            <li class="nav-item d-lg-none">
+                                <a href="/users/list" class="nav-link text-white account">
+                                    <%=req.session.user.fname%>
+                                </a>
+                            </li>
+                            <% } else if (req.session.user) {%>
+                                <li class="nav-item d-lg-none">
+                                    <a href="/detailsuser" class="nav-link text-white account">
+                                        <%=req.session.user.fname%>
+                                    </a>
+                                </li>
+                                <% } else { %>
+                                    <li class="nav-item d-lg-none">
+                                        <a href="/login" class="nav-link text-white">Sign in</a>
+                                    </li>
+                                    <li class="nav-item d-lg-none">
+                                        <a href="/signup" class="nav-link text-white">Sign up</a>
+                                    </li>
+                                    <% } %>
                     </ul>
                 </div>
-                <% if(req.session.user.isCustomer==true && req.session.user.isAdmin==true ) { %>
-                    <div class="m-3 text-right myacc">
-                        <a class="account" href="/users/list">
-                            <%=req.session.user.fname%> <img src="/images/user.png" alt="user" width="30rem">
-                        </a>
-                    </div>
-                    <% } else if(req.session.user.isCustomer==true) { %>
-                        <div class="m-3 text-right myacc">
-                            <a class="account" href="/detailsuser">
-                                <%=req.session.user.fname%> <img src="/images/user.png" alt="user" width="30rem">
-                            </a>
-                        </div>
-
+                <% if(req.session.user && req.session.user.isAdmin==true) { %>
+                    <div class="m-3 text-right d-none d-lg-block"><a class="account" href="/users/list">
+                            <%=req.session.user.fname%><img src="/images/user.png" alt="user" width="30rem">
+                        </a></div>
+                    <% } else if (req.session.user) {%>
+                        <div class="m-3 text-right d-none d-lg-block"><a class="account" href="/detailsuser">
+                                <%=req.session.user.fname%><img src="/images/user.png" alt="user" width="30rem">
+                            </a></div>
 
                         <% } else { %>
-                            <div class="m-3 text-right text-white">
-                                <a href="/login" class="nav-link text-white">Log in</a>
+                            <div class="m-3 text-right text-white d-none d-lg-block">
+                                <a href="/login" class="nav-link text-white">Sign in</a>
                             </div>
-                            <div class="m-3 text-right text-white">
-                                <a href="/signup" class="nav-link text-white"> Sign up</a>
+                            <div class="m-3 text-right text-white d-none d-lg-block">
+                                <a href="/signup" class="nav-link text-white">Sign up</a>
                             </div>
                             <% } %>
             </div>
         </nav>
 
-        <div class="container-fluid max-height wrapper">
-            <div class="custom-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, labore tenetur
-                deserunt illo numquam sequi?</div>
     </header>
-
-
-
+    <div class="container-fluid max-height wrapper">
+        <div class="custom-text">The clock is ticking. Are you becoming the person you want to be?</div>
+    </div>
     <!--end of header  -->
 
     <!-- about section -->
     <section id="about">
         <div class="container-fluid">
             <div class="row aboutus">
-                <div class="col-lg-6 col-sm-12 col md-12 about-picture height-60 ">
-
+                <div class="col-lg-6 col-sm-12 col-md-12 about-picture">
                 </div>
+
                 <div class="lg-6 col md-12 text-capitalize text-center custom-about">
 
-                    <h1 class="display-4 text-uppercase text-light custom-h1 aboutcontainer mt-5"><strong>about
-                            us</strong></h1>
-                    <div class="custom-h5">
-                        <h5 class="text-justify text-light text-height-2">Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Consequuntur voluptas at omnis doloribus, praesentium dignissimos odit
-                            numquam repudiandae assumenda, reprehenderit labore nemo tempore quia ipsa non cumque
-                            vel
-                            aspernatur ut doloremque repellat! Debitis, praesentium aut?</h5>
+                    <h1 class="display-5 text-uppercase text-light custom-h1 aboutcontainer pb-3">about
+                        us</h1>
+                    <div class="title-underline"></div>
+                    <div class="custom-h5 mt-5">
+                        <h5 class="text-justify text-light text-height-2">We believe the quality of our health
+                            determines the quality of our lives and nothing is more important than that. We believe
+                            fitness is about strengthening and conditioning your body and mind so you can get out there,
+                            explore the world, seek new adventures and be the person you were meant to be.</h5>
                     </div>
 
                 </div>
@@ -248,23 +432,24 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 col-sm-12 col-md-12">
-                            <h1 class="text-capitalize text-center pt-5 pb-3 custom-title">our workouts</h1>
+                            <h1 class="text-capitalize text-center pt-3
+                             pb-3 custom-title">our workouts</h1>
                             <div class="title-underline"></div>
                             <ul class="list-group list-group-flush pt-5 pb-3 text-center">
                                 <li class="list-group-item">
                                     <div class="mb-2"><img src="/images/fitness.png" alt="fitness" width="30rem"></div>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Achieving milestones with your body.
                                 </li>
                                 <li class="list-group-item">
                                     <div class="mb-2"><img src="/images/intensive.png" alt="intensive" width="30rem">
-                                    </div> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    </div> Build strength and confidence.
                                 </li>
                                 <li class="list-group-item">
                                     <div class="mb-2"><img src="/images/pilates.png" alt="pilates" width="30rem"></div>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Take your whole life to the next level.
                                 </li>
                                 <li class="list-group-item pt-5"><a class="link" href="/categories"><button
-                                            class="btnseemore">See more</button></a></li>
+                                            class="btn-see">See more</button></a></li>
                             </ul>
                         </div>
                         <div class="col-lg-6 col-sm-12 col-md-12 training-picture">
@@ -283,91 +468,46 @@
                     <!--title row-->
                     <div class="row">
                         <div class="col d-flex title justify-content-center">
-                            <i class="fa fa-users mr-3"></i>
+
                             <div class="title-text">
-                                <h1 class="text-uppercase custom-title">Meet our team</h1>
-                                <h4 class="text-capitalized text-muted">Lorem ipsum dolor sit amet.</h4>
+
+                                <h1 class="text-uppercase custom-title text-center"><i class="fa fa-users mr-3"></i>Meet
+                                    our team</h1>
+                                <h4 class="text-capitalized text-muted">Trusted advisors with a culture of excellence.
+                                </h4>
                             </div>
                         </div>
                     </div>
                     <!-- end of title row-->
                     <div class="row">
-                        <div class="col-lg-3 col-sm-6 my-5">
-                            <div class="text-center">
+                        <% for(let trainer in trainerData) { %>
+                            <div class="col-lg-3 col-sm-6 my-5">
+                                <div class="text-center">
 
-                                <img src="/images/iStock-675179390.jpg" width="150" alt=""
-                                    class="img-fluid rounded-circle">
-                                <div class="card-body">
-                                    <h2>Alfred</h2>
-                                    <h6>Trainer</h6>
-                                    <hr>
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Dolore, sint.</p>
-                                </div>
-                                <!-- <div class="card-footer">
-                                    <h6>see more</h6>
-                                </div> -->
-                            </div>
-                        </div>
-                        <!--end of team col-->
-                        <div class="col-lg-3 col-sm-6 my-5">
-                            <div class="text-center">
+                                    <img src="<%= trainerData[trainer].image %>" width="150" alt=""
+                                        class="img-fluid img-tr">
+                                    <div class="card-body">
+                                        <h2>
+                                            <%= trainerData[trainer].fName %>
+                                        </h2>
+                                        <h6>
+                                            <%= trainerData[trainer].lName %>
+                                        </h6>
+                                        <hr>
+                                        <p class="text-muted">
+                                            <%= trainerData[trainer].bio %>
+                                        </p>
+                                    </div>
 
-                                <img src="/images/iStock-856797530.jpg" width="150" alt=""
-                                    class="img-fluid rounded-circle">
-                                <div class="card-body">
-                                    <h2>Sandra</h2>
-                                    <h6>Trainer</h6>
-                                    <hr>
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Dolore, sint.</p>
                                 </div>
-                                <!-- <div class="card-footer">
-                                    <h6>see more</h6>
-                                </div> -->
                             </div>
-                        </div>
-                        <!--end of team col-->
-                        <div class="col-lg-3 col-sm-6 my-5">
-                            <div class="text-center">
+                            <% } %>
 
-                                <img src="/images/iStock-1018043738.jpg" width="150" alt=""
-                                    class="img-fluid rounded-circle">
-                                <div class="card-body">
-                                    <h2>John</h2>
-                                    <h6>Trainer</h6>
-                                    <hr>
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Dolore, sint.</p>
-                                </div>
-                                <!-- <div class="card-footer">
-                                    <h6>see more</h6>
-                                </div> -->
-                            </div>
-                        </div>
-                        <!--end of team col-->
-                        <div class="col-lg-3 col-sm-6 my-5">
-                            <div class="text-center">
-
-                                <img src="/images/iStock-1265268525.jpg" width="150" alt=""
-                                    class="img-fluid rounded-circle">
-                                <div class="card-body">
-                                    <h2>Emily</h2>
-                                    <h6>Trainer</h6>
-                                    <hr>
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Dolore, sint.</p>
-                                </div>
-                                <!-- <div class="card-footer">
-                                    <h6>see more</h6>
-                                </div> -->
-                            </div>
-                        </div>
-                        <!--	end of team col -->
+                                <!--	end of team col -->
                     </div>
-                    <div class=" d-flex justify-content-center px-4">
+                    <div class=" d-flex justify-content-center pb-4">
                         <div class="text-center">
-                            <a href="/trainers"><button type="button" class="btnseemore">See
+                            <a href="/trainers"><button type="button" class="btn-see">See
                                     More</button></a>
                         </div>
                     </div>
@@ -375,14 +515,17 @@
             </section>
             <!-- end of trainer section -->
 
-            <% if(req.session.user && req.session.user.hasActiveMembership && req.session.user.membershipName=='Bronze'
-                ) { %>
-                <!-- special offer banner -->
-                <section id="team" class="py-5">
-                    <div class="container">
-                        <div class="row">
-                            <a href="memberships/special/<%=req.session.user.hash%>"><img src="images/specialOffer.jpeg"
-                                    class="img-fluid" alt="special offer"></a>
+            <% if (req.session.user && req.session.user.eligibleForOffer) { %>
+
+                <section class="mb-5">
+                    <div class="container-promo">
+                        <div class="text-promo">
+                            <h1 class="title-promo">Special offer</h1>
+                            <h4 class="text-2">Upgrade to Silver and get up to:</h4>
+                            <span class="title-promo">20%</span>
+                            <h4 class="text-2">Discount + free trainings!</h4>
+                            <a href="memberships/special/<%=req.session.user.hash%>"><button
+                                    class="btn-get-it"><span>Get it now</span></button></a>
                         </div>
                     </div>
                 </section>
@@ -390,43 +533,100 @@
                 <% } %>
 
                     <!-- footer -->
-                    <footer id="footer" class="py-5 custom-footer">
+                    <section class="pb-1" id="contact">
                         <div class="container">
-                            <!--section-title -->
+
                             <div class="row">
-                                <div class="col text-center">
-                                    <h1 class="display-4 text-uppercase text-white mb-0">
-                                        <strong>follow us on</strong><a href="" name="contact"></a>
-                                    </h1>
-                                    <div class="row mb-3">
-                                        <div class="col text-center">
-                                            <a href="https://www.facebook.com/" class="btn">
-                                                <img src="/images/facebook.png" alt="" width="30rem">
-                                            </a>
-                                            <a href="https://www.instagram.com/" class="btn">
-                                                <img src="/images/instagram.png" alt="" width="30rem">
-                                            </a>
-                                            <a href="https://twitter.com/" class="btn">
-                                                <img src="/images/twitter.png" alt="" width="30rem">
-                                            </a>
-                                            <a href="https://www.youtube.com/" class="btn">
-                                                <img src="/images/youtube.png" alt="" width="30rem">
-                                            </a>
+
+                                <div class="col-md-4 px-3 text-center my-5 pt-3">
+                                    <img src="/images/main-logo.jpg" class="img-fluid mb-3" alt="company image"
+                                        width="150px" />
+
+                                    <div class="col text-center">
+                                        <h2 class="display-5 text-uppercase text-white my-4 h2title">
+                                            <strong>follow us on</strong>
+                                        </h2>
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <a href="https://www.facebook.com/" class="btn">
+                                                    <img src="/images/facebook.png" alt="" width="30rem">
+                                                </a>
+                                                <a href="https://www.instagram.com/" class="btn">
+                                                    <img src="/images/instagram.png" alt="" width="30rem">
+                                                </a>
+                                                <a href="https://twitter.com/" class="btn">
+                                                    <img src="/images/twitter.png" alt="" width="30rem">
+                                                </a>
+                                                <a href="https://www.youtube.com/" class="btn">
+                                                    <img src="/images/youtube.png" alt="" width="30rem">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="title-underline mt-4 bg-secondary"></div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-6 col-xl-5 mx-auto px-3 text-center my-5">
+                                    <!-- section title -->
+                                    <div class="row">
+                                        <div class="col text-center mb-1">
+                                            <h1 class="text-uppercase text-white custom-contact">contact us</h1>
+                                            <div class="title-underline my-3 bg-secondary">
+                                                <div class="title-underline__center"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="title-underline bg-primary"></div>
-                                    <p class="mt-2 text-capitalize text-muted text-center">Copyright @ Quarantgym is
-                                        registered
-                                        trademark of
-                                        Quarantgym
-                                        International Ltd. All rights reserved.</p>
+                                    <!-- end of section title -->
+
+                                    <div class="single-contact px-5 my-3 d-flex justify-content-between">
+                                        <span class="mr-3"> <i class=" text-white fas fa-map"></i> </span>
+                                        <p class="text-white text-capitalize">
+                                            123 main street Athens, ATT 90020
+                                        </p>
+                                    </div>
+
+
+                                    <div class="single-contact px-5 my-3 d-flex justify-content-between">
+                                        <span class=" mr-3"> <i class=" text-white fas fa-phone"></i> </span>
+                                        <p class="text-white text-capitalize">
+                                            + 123 456 789
+                                        </p>
+                                    </div>
+
+                                    <div class="single-contact px-5 my-3 d-flex justify-content-between">
+                                        <span class="mr-3"> <i class=" text-white fas fa-envelope"></i> </span>
+                                        <p class="text-white text-capitalize">
+                                            email@email.com
+                                        </p>
+                                    </div>
+
+                                    <div class="single-contact px-5 my-3 d-flex justify-content-between">
+                                        <span class="mr-3"> <i class="text-white fas fa-clock"></i> </span>
+                                        <p class="text-white text-capitalize">
+                                            mon - sat 8:00 AM - 7:00 PM
+                                        </p>
+                                    </div>
+
                                 </div>
                             </div>
-                            <!-- end of section-title -->
-
                         </div>
-                    </footer>
+                        <p class="mt-2 text-capitalize text-muted text-center">Copyright 2021@ Quarantgym is registered
+                            trademark of
+                            Quarantgym
+                            International Ltd. All rights reserved.</p>
+                    </section>
                     <!-- end of footer -->
+                    <!-- chat -->
+                    <div class="chat-icon">
+                        <!-- chat circle -->
+                        <a href="/chat">
+                            <div class="circle">
+                                <!-- end of chat circle -->
+                                <img src="/images/chatIcon.png" alt="" class="image">
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end of chat -->
 
                     <!-- Optional JavaScript -->
                     <script src="myscript.js"></script>

@@ -48,12 +48,12 @@ module.exports.models = {
   * > here.  This is a failsafe to prevent Sails from accidentally running   *
   * > auto-migrations on your production database.                           *
   * >                                                                        *
-  * > For more info, see:                                                    *
+  * > For more info,  see:                                                    *
   * > https://sailsjs.com/docs/concepts/orm/model-settings#?migrate          *
   *                                                                          *
   ***************************************************************************/
 
-  migrate: 'alter', 
+  migrate: 'safe', 
 
 
   /***************************************************************************

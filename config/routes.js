@@ -22,7 +22,7 @@ module.exports.routes = {
   'GET /': { action: 'entrance/homepage' }, 
   '/categories': { view: 'pages/categories' }, 
   '/locations': {view: 'pages/locations'},
-  '/kou': {view: 'error'},
+
 
 
   // About page

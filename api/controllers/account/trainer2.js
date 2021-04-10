@@ -1,5 +1,5 @@
 const Booking = require('../../../classes/newBooking')
-const trainingsHandle = require('./../../../application/tools').trainingsHandle
+//const trainingsHandle = require('./../../../application/tools').trainingsHandle
 
 
 module.exports = {
@@ -25,11 +25,7 @@ module.exports = {
             type: 'boolean'
         }
     },
-    // exits: {
-    //     success: {
-    //         viewTemplatePath: 'pages/account/successTemp' // default exit view to signup form
-    //     }
-    // },
+  
 
     fn: async function(inputs) {
         /* //uncomment for debugging
@@ -46,7 +42,6 @@ module.exports = {
         let body = this.req.body
 
 
-        
         // Query for finding location ID for the booking
         let locationId = await Location.find({
             where: {location: body.location}
@@ -72,9 +67,10 @@ module.exports = {
             locationId:_booking.locationId
             
         })
-        trainingsHandle('delete',req,res)
+        //await trainingsHandle('book',req,res)
 
         
         return this.res.successAction(`Success! new training created at ${_booking.startDate}`, {where:'inside trainer2'},'/detailsuser')
     }
 }
+

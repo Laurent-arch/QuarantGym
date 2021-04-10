@@ -56,13 +56,14 @@ async function timers(action,req,res){
     }
 }
 
+
 // simple function to handle trainings delete and add in session
 async function trainingsHandle(action,req,res){
 
     try{
         if((action=='book') || (action=='delete')){
             if(action=='book'){
-                if(req.session.user.trainingsBooked){
+                if((!req.session.user.trainingsBooked)||(req.session.user.trainingsBooked == 0)){
                     req.session.user.trainingsBooked = 1
                  } else {
                     req.session.user.trainingsBooked = req.session.user.trainingsBooked + 1

@@ -13,8 +13,6 @@ module.exports = async function(req, res, proceed) {
     } else {
         proceed();
     }
-
-    
 }
  
 // refers to : createMembCheck.js

@@ -137,12 +137,12 @@ module.exports = {
                 console.log('Trainer ID : ' + user_id)
                 var trainings = await Training.find({trainerId:user_id, isCancelled:0})
                 for (let training in trainings){
-                    
+                    let searchForLocation = trainings[training].locationId
                     let searchFor = trainings[training].customerId
                     let _customer = await User.find({where : {id:searchFor}}).limit(1)
-
-                    let row = new _Trainings(_customer[0].email, _customer[0].firstName, _customer[0].lastName,trainings[training].startDate,trainings[training].endDate,trainings[training].location,trainings[training].id)
-
+                    let area = await Location.find({ where: {id: searchForLocation}}).limit(1);
+                    let row = new _Trainings(_customer[0].email, _customer[0].firstName, _customer[0].lastName,trainings[training].startDate,trainings[training].endDate,area[0].location,trainings[training].id)
+                    
                     let today = new Date()
                     let trainingDate = new Date(row.startDate)
                     sessionsLeft = session.user.trainingsBooked;

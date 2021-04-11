@@ -104,6 +104,10 @@
         cursor: pointer;
     }
 
+    .login {
+        width: 100px;
+    }
+
     input[type="submit"]:hover {
         background: #0165b6;
     }
@@ -167,7 +171,7 @@
                             <%=req.session.user.fname%><img src="/images/user.png" alt="user" width="30rem">
                         </a></div>
                     <% } else { %>
-                        <div class="m-3 text-right text-white d-none d-lg-block">
+                        <div class="m-3 text-right text-white login d-none d-lg-block">
                             <a href="/login" class="nav-link text-white">Sign in</a>
                         </div>
 

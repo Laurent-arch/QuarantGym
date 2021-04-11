@@ -63,6 +63,9 @@ module.exports = async function(req, res, proceed) {
     if(startDate == "Invalid Date" || location == "") {
         errorLog.error = "Please fill in all fields"
     } 
+    if(req.session.user.isTrainer){
+        errorLog.error = "Trainers can not book trainings."
+    }
     if(trainerId == customerId) {
         errorLog.error = "Sorry you cannot book with yourself!"
     } 

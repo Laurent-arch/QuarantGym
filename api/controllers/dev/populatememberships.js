@@ -33,8 +33,10 @@ module.exports = {
                         membershipList[membership].price = 150
                     }  else if (membershipList[membership].name == 'Special Offer') {
                         membershipList[membership].price = 120
-                    }  else {
+                    }  else if (membershipList[membership].name == 'Gold'){
                         membershipList[membership].price = 300
+                    } else {
+                        membershipList[membership].price = 100
                     }
                     
                     
@@ -68,8 +70,10 @@ module.exports = {
                         membershipList[membership].price = 150
                     }  else if (membershipList[membership].name == 'Special Offer') {
                         membershipList[membership].price = 120
-                    }  else {
+                    }  else if (membershipList[membership].name == 'Gold'){
                         membershipList[membership].price = 300
+                    } else {
+                        membershipList[membership].price = 100
                     }
                     
                     //console.log(membershipList[membership].isOffer)

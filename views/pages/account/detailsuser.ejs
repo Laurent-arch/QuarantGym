@@ -124,7 +124,7 @@
                                 <label for="firstname">
                                     <h5>First name:</h5>
                                 </label>
-                                <input type="text" id="firstname" name="fname" class="form-control"
+                                <input type="text" id="firstname" name="fname" readonly class="form-control"
                                     value="<%=firstName%>">
                             </div>
                             <hr>
@@ -132,7 +132,7 @@
                                 <label for="lastname">
                                     <h5>Last Name:</h5>
                                 </label>
-                                <input type="text" id="lastname" name="lname" class="form-control"
+                                <input type="text" id="lastname" name="lname" readonly class="form-control"
                                     value="<%=lastName%>">
                             </div>
                             <hr>
@@ -171,11 +171,12 @@
                             </div>
                             <hr>
                             <!-- This part/data of the membership,money and sessions left are not passing through a controller. Need to be worked on. -->
+                            <% if(!req.session.user.isTrainer) {%>
                             <div class="col-md-3 mb-3">
                                 <label for="money">
                                     <h5>Money:</h5>
                                 </label>
-                                <input type="text" class="form-control" value="<%=balance%>">
+                                <input type="text" class="form-control" readonly value="<%=balance%>">
                                 <!-- <a href="/wallet"><button class="btn btn-outline-primary mt-2">Top
                                         up</button></a> -->
                             </div>
@@ -187,12 +188,15 @@
                                 </p>
                             </div>
                             <hr>
+                            <% } %>
+                            
                             <div class="d-flex justify-content-left ml-3">
                                 <button type="submit" class="btn submitok">Submit</button>
                             </div>
                         </form>
                         <!-- <hr> -->
 
+                        <% if(!req.session.user.isTrainer) {%>
                         <!-- Button trigger modal -->
                         <div class="col d-flex align-items-end flex-column">
                             <h5 class="mb-1">Membership</h5>
@@ -236,6 +240,7 @@
                             <a href="/wallet"><button class="btn btn-outline-primary mt-2">Top
                                     up</button></a>
                         </div>
+                        <% } %>
                         <br>
 
                         <!-- End of Modal Section -->

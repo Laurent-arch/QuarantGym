@@ -38,15 +38,11 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dimitrismavrokefalos/test-project-2.git"
+    "url": "https://github.com/Laurent-arch/QuarantGym"
   },
-  "author": "dimitrismavrokefalos",
+  "author": "laurent",
   "license": "ISC",
   "engines": {
     "node": "^14.13"
-  },
-  "bugs": {
-    "url": "https://github.com/dimitrismavrokefalos/test-project-2/issues"
-  },
-  "homepage": "https://github.com/dimitrismavrokefalos/test-project-2#readme"
+  }
 }
